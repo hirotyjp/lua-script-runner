@@ -1,0 +1,62 @@
+#
+#  Entry point
+#
+
+@CALL   file=data/splash.txt
+
+*main
+
+@IMAGE  layer=bg  file=img/bg1.jpg     class=bg1  top=0  left=0  opacity=0
+@IMAGE  layer=bg  file=img/frame2.png  class=bg1  top=0  left=0  opacity=0
+@IMAGE  layer=bg  file=img/title.png   class=bg1  top=60  left=120  opacity=0
+
+@TRANS  class=bg1  duration=0.5  target={ opacity=1 }
+@WAIT
+
+@STYLE  color={0.8, 0.8, 0.8}   hover= {0.9, 0.9, 0.9}  click= {1, 1, 1}  align=center  class=link1  opacity=0
+@LINK   text=Prologue     left=190  top=335  width=400   height=36    jump=*step1
+@LINK   text=Start        left=190  top=375  width=400   height=36    jump=*step2
+@LINK   text=Continue     left=190  top=415  width=400   height=36    jump=*step3
+@LINK   text=Extra        left=190  top=475  width=400   height=36    jump=*step4
+
+@TRANS  class=link1  duration=0.5  target={ opacity=1 }
+@WAIT
+@STOP
+
+*default
+	@TRANS  class=bg1    duration=0.5  target={ opacity=0 }
+	@TRANS  class=link1  duration=0.5  target={ opacity=0 }
+	@WAIT
+	@CLEAR  layer=all
+	@RETURN
+
+*step1
+	@CALL  label=*default
+	@CALL   file=data/prologue.txt
+
+	@JUMP  *end
+
+*step2
+	@CALL  label=*default
+	@CALL   file=data/main.txt
+
+	@JUMP  *end
+
+*step3
+	@CALL  label=*default
+	@TEXT   interval=20  text= not implemented yet!!
+	@PAUSE
+	@CLEAR  layer=msg
+	@JUMP  *end
+
+*step4
+	@CALL  label=*default
+	@TEXT   interval=20  text= not implemented yet!!
+	@PAUSE
+	@CLEAR  layer=msg
+	@JUMP  *end
+
+*end
+
+
+@JUMP  *main
