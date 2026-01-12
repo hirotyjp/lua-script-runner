@@ -28,14 +28,14 @@
 
 | Command   | Description | Available options |
 | --------- | ----------- | ----------------- |
-|`@STYLE`   | Setup Link Style  | <ul><li>color = {0-1, 0-1, 0-1} (Normal color)</li><li>hover  = {0-1, 0-1, 0-1} (Hover color)</li><li>click  = {0-1, 0-1, 0-1} (Click color)</li><li>class</li></ul> |
-|`@MESSAGE` | Setup Message Box | <ul><li>class</li><li>top</li><li>left</li><li>wifth</li><li>height</li></ul> |
-|`@TEXT`    | Draw text in Message Box | <ul><li>speed (msec)</li><li>text</li></ul> |
-|`@LINK`    | Draw Link| <ul><li>class</li><li>top</li><li>left</li><li>width</li><li>aligh</li><li>opacity (optional)</li></ul> |
+|`@STYLE`   | Setup Link Style<br>(Normal/Hover/Click RGB color) | <ul><li>color = {0-1, 0-1, 0-1}</li><li>hover = {0-1, 0-1, 0-1}</li><li>click = {0-1, 0-1, 0-1}</li><li>class</li></ul> |
+|`@MESSAGE` | Setup Message Box | <ul><li>class</li><li>top</li><li>left</li><li>width</li><li>height</li></ul> |
+|`@TEXT`    | Draw text in Message Box | <ul><li>interval = <i>millisec</i></li><li>text</li></ul> |
+|`@LINK`    | Draw Link| <ul><li>class</li><li>top</li><li>left</li><li>width</li><li>aligh</li><li>jump = (<i>target label after click</i>)</li><li>opacity (optional)</li></ul> |
 |`@IMAGE`   | Draw Image | <ul><li>layer = bg/fg/msg</li><li>file</li><li>class</li><li>top</li><li>left</li><li>opacity (optional)</li></ul> |
-|`@TRANS`   | Transition (Tween)<br>(This command use hump.timer internally) | <ul><li>class</li><li>duration</li><li>target = { <i>target variable name </i>= value}</li></ul> |
+|`@TRANS`   | Transition (Tween)<br>(This command use hump.timer internally) | <ul><li>class</li><li>duration</li><li>target = { <i>target variable name </i>= value, ... }</li></ul> |
 |`@CLEAR`   | Clear Contents from Layers| <ul><li>layer</li></ul> |
-|`@SHADER`  | Set GLSL Shader | <ul><li>layer = bg/fg/msg</li><li>file</li><li>class</li><li>progress (dynamic value to be sent into glsl shader)</li></ul> |
+|`@SHADER`  | Set GLSL Shader | <ul><li>layer = bg/fg/msg</li><li>file</li><li>class</li><li>progress (Dynamic value sent to glsl shader)</li></ul> |
 |`@PURGE`   | Purge layer except for the latest image | <ul><li>layer = bg/fg/msg/controls/all</li></ul> |
 
 ### Wait control
@@ -43,7 +43,7 @@
 | Command   | Description | Available options |
 | --------- | ----------- | ----------------- |
 |`@STOP`    | Completely stop | n/a |
-|`@WAIT`    | Wait for transision | n/a |
+|`@WAIT`    | Wait for transition | n/a |
 |`@PAUSE`   | Wait for a key input | <ul><li>timeout (seconds)</li></ul> |
 
 ### Variables control
