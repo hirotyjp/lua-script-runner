@@ -58,3 +58,9 @@
 | --------- | ----------- | ----------------- |
 |`@LOG`     | Print a variable | ( <i>expression</i> ) |
 |`@ERROR`   | Stop with Error message | <i>message text</i> |
+
+
+## Concepts of each layer
+
+<img width="708" height="524" alt="image" src="https://github.com/user-attachments/assets/2df0723e-b948-4084-9ab9-f2e74cf1cfdb" />
+
