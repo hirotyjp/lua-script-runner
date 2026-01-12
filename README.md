@@ -35,6 +35,8 @@
 |`@IMAGE`    | Draw Image |
 |`@TRANS`    | Transition |
 |`@CLEAR`    | Clear Contents from Layers|
+|`@SHADER`   | Set Shader |
+|`@PURGE`    | Purge all images in a layer except for the latest image |
 
 ### Wait control
 
@@ -44,15 +46,15 @@
 |`@WAIT`     | Wait for transision |
 |`@PAUSE`    | Wait for key innput |
 
+### Variables control
+
+| Command   | Description |
+| --------- | ----------- |
+|`@CMD`      | |
+
 ### Others
 
 | Command   | Description |
 | --------- | ----------- |
 |`@LOG`      | Print a variable |
 |`@ERROR`    | Stop with Error message |
-
-
-
-|`SHADER`   | |
-|`PURGE`    | |
-|`CMD`      | |
